@@ -1,0 +1,20 @@
+<%- include("header") -%>
+
+<h1 class="mt-1">Hello</h1>
+
+<div class="posts mt-3">
+  <h3>Test Para</h3>
+  <p><%= para1; %></p>
+</div>
+
+<% for (let i=0; i < posts.length; i++) {%>
+
+<div class="posts mt-3">
+  <% var trimmedString = posts[i].data.substring(0, 100); %>
+
+  <h3><%= posts[i].title; %></h3>
+  <p>
+    <%= trimmedString %>... <a href="/post/<%= posts[i].title %>">see more</a>
+  </p>
+</div>
+<% }; %> <%- include("footer") -%>
